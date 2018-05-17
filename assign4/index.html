@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Fish Hangman</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hangman using fish names">
+    <script src="js/hangman.js"></script>
+</head>
+<body>
+    <h1>FISH HANGMAN</h1>
+    <br />
+    <br />
+        Name: <input type="text" id="name" />
+        <button onclick="start()">Start Game</button>
+        <br />
+        <br />
+        Enter a letter: <input type="text" id="guessedChar" />
+        <button onclick="guess()">Guess</button>
+
+    <br />
+    <br />
+    <div>
+        <p id="info">
+
+        </p>
+    </div>
+    <div>
+        <p id="display">
+
+        </p>
+    </div>
+
+    <img src="img/0.png" id="hangman" />
+
+</body>
+</html>

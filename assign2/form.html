@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ithaca College</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ithaca, Home, Info, Information">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="css/style.css" rel="stylesheet" media="screen">
+    <style media="screen">
+        form {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html"><h1 class="blue no-margin-top">Ithaca College</h1></a>
+    <table style="margin: 10px;">
+      <ul class="nav">
+        <li class="yellow"><a class="yellow" href="index.html">Home</a></li>
+        <li class="blue"><a class="blue" href="courses.html">Courses</a></li>
+        <li class="yellow"><a class="yellow" href="activities.html">Activities</a></li>
+      </ul>
+    </table>
+
+    <img src="img/map.jpg" alt="image map" usemap="#map">
+    <map name="map">
+        <area shape="poly" coords="850,243,800,244,740,250,675,258,610,272,570,285,512,315,850,315,850,243" alt="Ithaca College" href="https://www.ithaca.edu/">
+        <area shape="circle" coords="85,217,100" alt="Courses" href="courses.html">
+        <area shape="circle" coords="712,140,75" alt="Activities" href="activities.html">
+    </map>
+
+<form name="myForm" action="http://cs-ithaca.eastus.cloudapp.azure.com/~barr/assign2.php" method="post">
+    <input type="text" name="var1" />
+    What is your name?
+    <br />
+    <br />
+    <input type="text" style="height: 50px;" name="var2" />
+    What are your thoughts on Ithaca College?
+    <br />
+    <br />
+    Rate Ithaca on a 1-3 scale.
+    <br />
+    <input type="radio" name="var3" value="Rating: 1 of 3" />1
+    <br />
+    <input type="radio" name="var3" value="Rating: 2 of 3" />2
+    <br />
+    <input type="radio" name="var3" value="Rating: 3 of 3" />3
+    <br />
+    <br />
+    Ithaca College is a _____ college!
+    <br />
+    <input type="checkbox" name="var4" value="Ithaca College is a bad college." />Bad
+    <br />
+    <input type="checkbox" name="var4" value="Ithaca College is an okay college." />Okay
+    <br />
+    <input type="checkbox" name="var4" value="Ithaca College is a great college!" />Great
+    <br />
+    <br />
+    Would you apply to Ithaca College?
+    <br />
+    <select name="var5">
+        <option value="">---</option>
+        <option value="Yes, I would apply to Ithaca College!">Yes</option>
+        <option value="No, I would not apply to Ithaca College.">No</option>
+        <option value="Maybe, I would apply to Ithaca College.">Maybe</option>
+    </select>
+    <br />
+    <br />
+    <input type="text" name="var6" /> Did you like the website?
+    <br />
+    <br />
+    Would you tell your friends about Ithaca College?
+    <br />
+    <input type="radio" name="var7" value="Yes, I would tell my friends about Ithaca College!" />Yes
+    <br />
+    <input type="radio" name="var7" value="No, I would not tell my friends about Ithaca College." />No
+    <br />
+    <br />
+
+
+
+
+
+    <input type="submit" value="Submit" />
+</form>
+
+</body>
+</html>

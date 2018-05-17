@@ -1,0 +1,48 @@
+body {
+    background: lightblue;
+}
+
+.table-hover:hover {
+    background: lightcyan;
+}
+
+li:hover {
+    background-color: lightcyan;
+}
+
+p {
+    color: black;
+}
+
+.div-style {
+    padding: 5px;
+    margin: 15px;
+    background-color: lightcyan;
+}
+
+.p-center {
+    text-align: center;
+    background-color: lightgray;
+}
+
+.no-padding {
+    padding-top: 0px;
+}
+
+.blue {
+    background: royalblue;
+    color: gold;
+}
+
+.yellow {
+    background: gold;
+    color: royalblue;
+}
+
+.no-margin-top {
+    margin-top: 0;
+}
+
+a {
+    text-decoration: none;
+}

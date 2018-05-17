@@ -1,0 +1,217 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h5 {
+    font-weight: bold;
+}
+
+.margin {
+    margin:10px;
+}
+
+td {
+    padding: 20px;
+}
+
+.shadow {
+    box-shadow: 5px 10px 18px #888888;
+}
+
+.background-color {
+    background: #f5f5f5;
+    margin-bottom: 20px;
+    border: solid black 1px;
+    box-shadow: 5px 10px 18px #888888;
+}
+
+.lightgray {
+    background: lightgray;
+}
+
+.background-color:hover,
+.background-color:active {
+    background: #c9c9c9;
+}
+
+.card,
+.card:hover {
+    text-decoration: none;
+    color: black;
+}
+
+.right {
+
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.nav-style {
+    background:black;
+}
+.nav-style a {
+    color:yellow;
+}
+.nav-style ul a:hover,
+.nav-style ul a:focus,
+.nav-style ul a:active {
+    color:black;
+    background:yellow;
+}
+
+.navbar-brand {
+    padding:10px;
+    margin:0 !important;
+}
+.navbar-header {
+    height: 80px;
+    margin:0 !important;
+}
+
+.border {
+    border:solid red 2px;
+}
+
+.navbar {
+    margin:0;
+    border:0;
+}
+.container {
+    padding:0;
+}
+
+.jumbotron.jumbotron-fluid {
+    border-radius:0;
+    background:black;
+    margin:0;
+    padding:0;
+}
+
+.well {
+    border-radius:0;
+    margin-bottom:40px;
+}
+
+.padding{
+    padding:20px;
+}
+
+.icon-bar {
+    background:white;
+}
+
+.nav-style li a  {
+    height:80px;
+    font-size:24px;
+    line-height: 35px;
+    padding:20px;
+}
+
+.nav .open>a {
+    background:yellow;
+    color:black;
+}
+.nav .open>a:hover,
+.nav .open>a:focus,
+.nav .open>a:active {
+    background:yellow;
+}
+.open>.dropdown-menu {
+    background:black;
+    color:yellow;
+}
+.dropdown-menu>li>a {
+    color:yellow;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+.footer {
+    color: yellow;
+    background: black;
+}
+
+.row {
+    margin: 0;
+}
+
+.center {
+    text-align: center;
+}
+
+.right {
+    text-align: right;
+}
+
+.left {
+    text-align: left;
+}
+
+.footer-links {
+    text-align: center;
+}
+
+.footer-links a {
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: none;
+    background: yellow;
+    color: black;
+    cursor: pointer;
+}
+
+.black {
+    background: black;
+}
+
+.navbar-toggle .icon-bar {
+    width: 50px;
+    height: 5px;
+}
+
+.navbar-toggle .icon-bar+.icon-bar {
+    margin-top: 15px;
+}
+
+.navbar-text  {
+    color: lightgray;
+    height:80px;
+    font-size:24px;
+    line-height: 35px;
+    float:right;
+}
+
+@media screen and (max-width: 995px) {
+    .navbar-text  {
+        display:none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav-style ul  {
+        margin:0;
+    }
+
+    .navbar-text  {
+        color: lightgray;
+        height:80px;
+        font-size:24px;
+        line-height: 35px;
+        float:none;
+        display: block;
+    }
+
+    .navbar-nav .open .dropdown-menu .dropdown-header, .navbar-nav .open .dropdown-menu>li>a {
+        padding: 30px;
+    }
+}

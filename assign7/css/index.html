@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Assignment 7</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <link href="css/style.css" rel="stylesheet" media="screen">
+
+    <script>
+    function search() {
+        var category = document.querySelector('input[name = "genre"]:checked').value;
+
+        var search = document.querySelector('input[name = "search"]:checked').value;
+
+        var text = document.getElementById(search).value;
+
+        if (search == "A") {
+            var notS = "B";
+        } else {
+            var notS = "A";
+        }
+
+        if (!text) {
+            document.getElementById('h1').innerHTML = "Please enter a search term.";
+        }
+        else {
+            document.getElementById('h1').innerHTML = "Results of Search!";
+            document.getElementById('table').innerHTML = "<tr><th>Title</th><th>Author</th></tr>";
+
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("table").innerHTML = this.responseText;
+                }
+            };
+            xmlhttp.open("GET", "library.php?t=" + text + "&c=" + category + "&notS=" + notS + "&s=" + search, true);
+            xmlhttp.send();
+        }
+    }
+    </script>
+
+</head>
+<body>
+    <div>
+        <div style="float:left; width: 50%;">
+            <h1>Welcome to Colin's Library!</h1>
+
+            <form style="border: solid black 2px; padding: 10px; width: 300px;">
+                Select a category:
+                <br />
+                <input type="radio" name="genre" value="scifi" checked />scifi
+                <br />
+                <input type="radio" name="genre" value="hist" />historical fiction
+                <br />
+                <input type="radio" name="genre" value="myst" />mystery
+                <br />
+                <input type="radio" name="genre" value="nonf" />non-fiction
+                <br />
+                <br />
+                Select a function:
+                <br />
+                <input type="radio" name="search" value="B" checked />search for book
+                <br />
+                <input type="radio" name="search" value="A" />search for author
+                <br />
+                <br />
+                Book Name:<input type="text" id="B" />
+                <br />
+                <br />
+                Author Name:<input type="text" id="A" />
+            </form>
+            <br />
+            <button onclick="search()">Submit</button>
+        </div>
+
+
+
+        <div id="test" style="float:left; width: 50%;">
+            <h1 id="h1">Results of Search!</h1>
+
+            <table id="table">
+                <tr >
+                    <th>
+                        Title
+                    </th>
+                    <th>
+                        Author
+                    </th>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

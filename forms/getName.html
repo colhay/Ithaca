@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function validateForm() {
+    var x = document.forms["myForm"]["fname"].value;
+    var y = document.forms["myForm"]["lname"].value;
+    if (y.toLowerCase() == "hay") {
+        alert(x + " "  + y + " is the best!");
+        return false;
+    }
+    else if (y.toLowerCase() == "barr") {
+        console.log(x + " " + y + " is the best!");
+	return false;
+    }
+    else{
+	return true;
+    }
+}
+</script>
+</head>
+<body>
+
+<form name="myForm" action="http://cs-ithaca.eastus.cloudapp.azure.com/~barr/examples/getName.php"
+onsubmit="return validateForm()" method="post">
+First Name: <input type="text" name="fname">
+<br />
+<br />
+Last Name: <input type="text" name="lname">
+<br />
+<br />
+<input type="submit" value="Submit">
+</form>
+
+</body>
+</html>

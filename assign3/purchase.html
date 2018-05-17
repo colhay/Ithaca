@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ithaca College</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ithaca, Home, Info, Information">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="css/style.css" rel="stylesheet" media="screen">
+    <script src="js/functions.js"></script>
+    <style media="screen">
+        form {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html"><h1 class="blue no-margin-top">Ithaca College</h1></a>
+    <table style="margin: 10px;">
+      <ul class="nav">
+        <li class="yellow"><a class="yellow" href="index.html">Home</a></li>
+        <li class="blue"><a class="blue" href="courses.html">Courses</a></li>
+        <li class="yellow"><a class="yellow" href="activities.html">Activities</a></li>
+      </ul>
+    </table>
+
+    <img src="img/map.jpg" alt="image map" usemap="#map">
+    <map name="map">
+        <area shape="poly" coords="850,243,800,244,740,250,675,258,610,272,570,285,512,315,850,315,850,243" alt="Ithaca College" href="https://www.ithaca.edu/">
+        <area shape="circle" coords="85,217,100" alt="Courses" href="courses.html">
+        <area shape="circle" coords="712,140,75" alt="Activities" href="activities.html">
+    </map>
+
+<form name="myForm">
+    <br />
+    <fieldset>
+        <legend>Keyboard</legend>
+        <input type="radio" name="keyboard" value="Ducky" checked /><strong> $140</strong> | Ducky Shine 6 Mechanical Keyboard
+        <br />
+        <input type="radio" name="keyboard" value="Filco" /><strong> $130</strong> | Filco Majestouch 2 Mechanical Keyboard
+        <br />
+        <input type="radio" name="keyboard" value="Vortex" /><strong> $120</strong> | Vortex POK3R Mechanical Keyboard
+
+    </fieldset>
+    <br />
+    <fieldset>
+        <legend>Keycaps</legend>
+        <select id="keycaps">
+            <option value="Cherry"><strong>$0</strong> | Blue Cherry MX</option>
+            <option value="Gateron"><strong>$5</strong> | Blue Gateron</option>
+            <option value="Topre"><strong>$20</strong> | Topre</option>
+        </select>
+    </fieldset>
+    <br />
+    <fieldset>
+        <legend>Add-ons</legend>
+        <input type="checkbox" name="add" value="RGB" /><strong> $20</strong> | RGB
+        <br />
+        <input type="checkbox" name="add" value="Case" /><strong> $15</strong> | Case
+        <br />
+        <input type="checkbox" name="add" value="Remover" /><strong> $5</strong> | Keycap Remover
+    </fieldset>
+    <br />
+    <fieldset>
+        <legend>Personal Information</legend>
+        <input type="text" id="fname" />
+        First Name
+        <br />
+        <br />
+        <input type="text" id="lname" />
+        Last Name
+        <br />
+        <br />
+        <input type="text" id="address" />
+        Address
+    </fieldset>
+    <br />
+    <fieldset>
+        <legend>Action</legend>
+        <button onclick="estimateCost()">estimate</button>
+        <br />
+        <br />
+        <button onclick="calcCost()">buy</button>
+        <br />
+        <br />
+        <button>reset</button>
+    </fieldset>
+</form>
+
+</body>
+</html>

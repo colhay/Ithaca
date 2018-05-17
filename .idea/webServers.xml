@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="60bc6d62-7aed-4736-85c4-cccf2c5f02bd" name="cs-ithaca.eastus.cloudapp.azure.com" url="http://cs-ithaca.eastus.cloudapp.azure.com/~chay">
+        <fileTransfer host="cs-ithaca.eastus.cloudapp.azure.com" port="22" rootFolder="/home/chay/public_html" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

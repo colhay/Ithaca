@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ithaca College</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ithaca, Home, Info, Information">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="css/style.css" rel="stylesheet" media="screen">
+    <style media="screen">
+        form {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+<h1>Buy A Mechanical Keyboard</h1>
+<hr />
+<form name="myForm" action="calcCost.php">
+    <fieldset>
+        <legend>Keyboard</legend>
+        <input type="radio" name="keyboard" value="Ducky" checked /><strong> $140</strong> | Ducky Shine 6 Mechanical Keyboard
+        <br />
+        <input type="radio" name="keyboard" value="Filco" /><strong> $130</strong> | Filco Majestouch 2 Mechanical Keyboard
+        <br />
+        <input type="radio" name="keyboard" value="Vortex" /><strong> $120</strong> | Vortex POK3R Mechanical Keyboard
+
+    </fieldset>
+    <br />
+    <fieldset>
+        <legend>Keycaps</legend>
+        <select id="keycaps" name="keycaps">
+            <option value="Cherry"><strong>$0</strong> | Blue Cherry MX</option>
+            <option value="Gateron"><strong>$5</strong> | Blue Gateron</option>
+            <option value="Topre"><strong>$20</strong> | Topre</option>
+        </select>
+    </fieldset>
+    <br />
+    <fieldset>
+        <legend>Add-ons</legend>
+        <input type="checkbox" name="RGB" value="RGB" /><strong> $20</strong> | RGB
+        <br />
+        <input type="checkbox" name="Case" value="Case" /><strong> $15</strong> | Case
+        <br />
+        <input type="checkbox" name="Remover" value="Remover" /><strong> $5</strong> | Keycap Remover
+    </fieldset>
+    <br />
+    <fieldset>
+        <legend>Personal Information</legend>
+        <input type="text" id="fname" name="fname" />
+        First Name
+        <br />
+        <br />
+        <input type="text" id="lname" name="lname" />
+        Last Name
+        <br />
+        <br />
+        <input type="text" id="address" name="address" />
+        Address
+    </fieldset>
+    <br />
+    <fieldset>
+        <legend>Action</legend>
+        <button name="type" value="est">estimate</button>
+        <br />
+        <br />
+        <button name="type" value="calc">buy</button>
+        <br />
+        <br />
+        <button name="type" value="reset">reset</button>
+    </fieldset>
+</form>
+
+</body>
+</html>

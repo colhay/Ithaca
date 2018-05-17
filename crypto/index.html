@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+    <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous">
+    </script>
+</head>
+<body>
+    <h1>Crypto</h1>
+    <div id="data"></div>
+    <div class="ct-chart ct-double-octave"></div>
+
+    <script type="text/javascript" >
+
+        var bitcoin = {id:"bitcoin", holding:0.02185281, value:0};
+        var ethereum ={id:"ethereum", holding:0.00118151, value:0};
+        var litecoin = {id:"litecoin", holding:0.00491673, value:0};
+        var namecoin = {id:"namecoin", holding:27.50036069, value:0};
+        var peercoin = {id:"peercoin", holding:30.024842, value:0};
+        var novacoin = {id:"novacoin", holding:18, value:0};
+
+        var wallet = [bitcoin, ethereum, litecoin, namecoin, peercoin, novacoin];
+
+        const div = document.getElementById('data');
+        const url = 'https://api.coinmarketcap.com/v1/ticker/?limit=0';
+        $.getJSON(url, function(data) {
+            data.forEach(function(ticker) {
+                wallet.forEach(function(wallet) {
+                    if (ticker.id == wallet.id) {
+                        wallet.value = wallet.holding*ticker.price_usd;
+                        document.getElementById('data').innerHTML += wallet.id + ": " + wallet.value + "<br /><br />";
+                    }
+                });
+            });
+            var total = 0;
+            wallet.forEach(function(wallet) {
+                    total += wallet.value;
+            });
+            document.getElementById('data').innerHTML += "<h1>" + total + "</h1>";
+
+            var str_json = JSON.stringify(wallet);
+
+            $.post("JSON_Handler.php", str_json, function(response){
+                alert("worked");
+            });
+        });
+    </script>
+    <script>
+        var data = {
+        // A labels array that can contain any sort of values
+        labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
+        // Our series array that contains series objects or in this case series data arrays
+        series: [
+        [5, 2, 4, 2, 0],
+        [2, 5, 1, 4, 3]
+        ]
+        };
+
+        // Create a new line chart object where as first parameter we pass in a selector
+        // that is resolving to our chart container element. The Second parameter
+        // is the actual data object.
+        new Chartist.Line('.ct-chart', data);
+    </script>
+</body>
+</html>

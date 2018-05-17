@@ -1,0 +1,94 @@
+body {
+    background: lightblue;
+}
+
+p {
+    font-family: monospace;
+    font-style: italic;
+    color: gray;
+    font-size: 14px;
+}
+
+h1 {
+    font-family: monospace;
+    font-style: italic;
+    color: black;
+    font-size: 24px;
+}
+
+ul.nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: lightblue;
+}
+
+ul.nav li {
+    float: left;
+}
+
+ul.nav li a {
+    display: block;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+ul.nav li a:hover {
+    background-color: lightgray;
+    color: white;
+}
+
+.w3-striped tbody tr:nth-child(even) {
+    background-color: paleturquoise;
+}
+
+.table-hover:hover {
+    background-color: lightcyan !important;
+}
+
+li:hover {
+    background-color: lightcyan;
+}
+
+.form-hover {
+    background-color: paleturquoise;
+}
+.form-hover:hover {
+    background-color: lightcyan;
+}
+
+
+
+.div-style {
+    padding: 5px;
+    margin: 15px;
+    background-color: lightcyan;
+}
+
+.p-center {
+    text-align: center;
+    background-color: lightgray;
+}
+
+.no-padding {
+    padding-top: 0px;
+}
+
+.blue {
+    background: royalblue;
+    color: gold;
+}
+
+.yellow {
+    background: gold;
+    color: royalblue;
+}
+
+.no-margin-top {
+    margin-top: 0;
+}
+
+a {
+    text-decoration: none;
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Assignment 5</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <link href="css/style.css" rel="stylesheet" media="screen">
+    <script src="js/soccer.js"></script>
+</head>
+<body onload="checkCookie()">
+    <div>
+        <div style="float:left; width: 50%;">
+            <h1>Soccer Team Database</h1>
+
+            <form id="addTeam" style="border: solid black 2px; padding: 10px; width: 300px;">
+                <input type="radio" name="tag" value="p" checked />p tag
+                <br />
+                <input type="radio" name="tag" value="1" />h1 tag
+                <br />
+                <input type="radio" name="tag" value="2" />h2 tag
+                <br />
+                <input type="radio" name="tag" value="s" />span tag
+                <br />
+                <br />
+                League Name <input type="text" id="text"/>
+                <br />
+                <br />
+            </form>
+            <br />
+            <button onclick="addLeague()">Add League Name</button>
+            <br />
+            <br />
+
+            <form style="border: solid black 2px; padding: 10px; width: 300px;">
+                Team Name <input type="text" id="team"/>
+                <br />
+                Year Founded <input type="text" id="year"/>
+                <br />
+                Trophies <input type="text" id="trophies"/>
+                <br />
+                <br />
+            </form>
+            <br />
+            <button onclick="addRow()">Insert Row!</button>
+            <br />
+            <br />
+            <button onclick="displayAll()">Display all id tags</button>
+        </div>
+
+        <div style="float:left; width: 50%;">
+            <p>
+                Soccer Teams:
+            </p>
+
+            <table id="table">
+                <tr >
+                    <th>
+                        Team
+                    </th>
+                    <th>
+                        Year Founded
+                    </th>
+                    <th>
+                        Trophies
+                    </th>
+                </tr>
+                <tr >
+                    <td>Liverpool</td>
+                    <td>1892</td>
+                    <td>18</td>
+                </tr>
+            </table>
+
+            <div id="addedByUser">
+
+            </div>
+
+            <p id="cookie1">
+                Your Name:
+            </p>
+            <p id="cookie2">
+                Your Favorite Team:
+            </p>
+            <p id="cookie3">
+                Your Age:
+            </p>
+
+            <button onclick="newCookies()">Change Cookies</button>
+        </div>
+    </div>
+</body>
+</html>

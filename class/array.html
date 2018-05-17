@@ -1,0 +1,61 @@
+
+<!DOCTYPE HTML>
+<html>  
+<head>
+<title>Array Example</title>
+
+<style>
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+</style>
+<script>
+
+var names = [];
+
+function displayName(){
+    var first = document.forms["myForm"]["fname"].value;
+    var last = document.forms["myForm"]["lname"].value;
+    var email = document.forms["myForm"]["email"].value;
+
+    names.push(first);
+    names.push(last);
+    names.push(email);
+
+    document.getElementById("myNames").innerHTML = names.toString();
+
+}
+
+function makeArray(){
+
+  var nameString = names.join(';');
+  alert("name string is " + nameString);
+  var nameArray = nameString.split(';');
+  alert("first element of name array is " + nameArray[0]);
+}
+</script>
+</head>
+<body>
+
+<form name="myForm" action="" method="post">
+<fieldset>
+  <legend>Personal Stuff</legend>
+	Frist Name: <input type="text" name="fname"><br>
+	Last Name: <input type="text" name="lname"><br>
+	E-mail: <input type="text" name="email"><br>
+</fieldset>
+<input type="button" value="display names" class="button" onClick="displayName()">
+<input type="button" value="display names" class="button" onClick="makeArray()">
+</form>
+
+<h2>Names:</h2>
+<p id="myNames"></p>
+</body>
+</html>

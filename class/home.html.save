@@ -1,0 +1,34 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Test</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Test">
+    <script>
+      function myFunction(){
+        var myWindow = window.open("", "", "width=800,height=600");
+        myWindow.document.write("<p> Hey </p>")
+      }
+      function checkCookie() {
+        var user = getCookie("username");
+        var col = getCookie("color")
+        if (user != "") {
+          alert("Welcome again " + user + ". Your favorite color is " + col);
+        } else {
+          user = prompt("Please enter your name:","");
+          col = prompt("Please enter your favorite color:","");
+          if (user != "" && user != null) {
+            setCookie("username", user, "color", col, 30);
+          }
+        }
+      }
+    </script>
+</head>
+<body onload="setTimeout(myFunction, 3000)">
+  <button onclick="checkCookie()">Cookie</button>
+</body>
+</html>
