@@ -1,3 +1,3 @@
 <script>
-    window.location.replace("https://www.facebook.com");
+    window.location.replace("https://www.reddit.com");
 </script>
